@@ -6,7 +6,7 @@ import Demo, { DemoProps } from '../../components/Demo';
 
 const BadgePage = () => {
   const navigation = useNavigation();
-  const [badgeProps, setBadgeProps] = useState<BadgeProps>({ text: '99', size: 'small', dot: false, corner: true });
+  const [badgeProps, setBadgeProps] = useState<BadgeProps>({ text: '99', size: 'small', dot: false, corner: false });
   const [sizeIndex, setSizeIndex] = useState(0);
   const [dotIndex, setDotIndex] = useState(0);
   const [cornerIndex, setCornerIndex] = useState(0);
@@ -96,8 +96,8 @@ const styles = StyleSheet.create({
     height: 100,
     backgroundColor: '#fff',
     flexDirection: 'row',
-    // alignItems: 'center',
-    // justifyContent: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, SafeAreaView, View, Text, TouchableHighlight, ScrollView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import Clipboard from '@react-native-community/clipboard';
-import { Theme, Navbar, Icon } from 'react-native-ui-view';
+import { Theme, Navbar, Icon, Toast } from 'react-native-ui-view';
 
 const IconPage = () => {
   const navigation = useNavigation();
@@ -56,6 +56,7 @@ const IconPage = () => {
 
   const copyIcon = (name: string) => {
     Clipboard.setString(`<Icon name="${name}" />`);
+    Toast.info(`Icon ${name} 已复制`);
   };
 
   return (
