@@ -24,6 +24,10 @@ const Comp = () => {
       onPress: () => {},
     },
     {
+      title: 'Search 搜索',
+      onPress: () => navigation.navigate(MODULES.SEARCH),
+    },
+    {
       title: 'TabBar 底部导航',
       onPress: () => {},
     },

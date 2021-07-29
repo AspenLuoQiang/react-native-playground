@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { isValidElement } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import Switcher, { SwitcherProps } from '../Switcher';
 
@@ -19,7 +19,7 @@ const Demo: React.FC<DemoProps> = props => {
           <Text style={styles.resultTitleText}>演示效果</Text>
         </View>
         <View style={styles.resultContent}>
-          <Text style={styles.resultContentTips}>{result}</Text>
+          {isValidElement(result) ? result : <Text style={styles.resultContentTips}>{result}</Text>}
         </View>
       </View>
       <View style={styles.params}>
@@ -62,6 +62,7 @@ const styles = StyleSheet.create({
   },
   resultContent: {
     marginTop: 15,
+    width: '100%',
   },
   resultContentTips: {
     color: '#999',

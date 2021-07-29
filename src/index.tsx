@@ -8,6 +8,7 @@ import IconPage from './pages/Icon';
 import ModalPage from './pages/Modal';
 import ToastPage from './pages/Toast';
 import BadgePage from './pages/Badge';
+import SearchPage from './pages/Search';
 
 const Stack = createStackNavigator();
 
@@ -26,6 +27,7 @@ const App = () => {
           <Stack.Screen name={MODULES.ICON} component={IconPage} />
           <Stack.Screen name={MODULES.BADGE} component={BadgePage} />
           <Stack.Screen name={MODULES.MODAL} component={ModalPage} />
+          <Stack.Screen name={MODULES.SEARCH} component={SearchPage} />
           <Stack.Screen name={MODULES.TOAST} component={ToastPage} />
         </Stack.Navigator>
       </NavigationContainer>

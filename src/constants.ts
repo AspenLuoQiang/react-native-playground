@@ -5,4 +5,5 @@ export const MODULES = {
   MODAL: 'MODAL',
   TOAST: 'TOAST',
   BADGE: 'BADGE',
+  SEARCH: 'SEARCH',
 };
