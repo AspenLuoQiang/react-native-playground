@@ -3,6 +3,8 @@ import { StyleSheet, SafeAreaView, View, Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Theme, Navbar, Badge, BadgeProps } from 'react-native-ui-view';
 import Demo, { DemoProps } from '../../components/Demo';
+import { PageContainer } from '../../core/router';
+import { MODULES } from '../../constants';
 
 const BadgePage = () => {
   const navigation = useNavigation();
@@ -101,4 +103,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default BadgePage;
+PageContainer(MODULES.BADGE, BadgePage);

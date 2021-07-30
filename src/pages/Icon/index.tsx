@@ -3,6 +3,8 @@ import { StyleSheet, SafeAreaView, View, Text, TouchableHighlight, ScrollView } 
 import { useNavigation } from '@react-navigation/native';
 import Clipboard from '@react-native-community/clipboard';
 import { Theme, Navbar, Icon, Toast } from 'react-native-ui-view';
+import { PageContainer } from '../../core/router';
+import { MODULES } from '../../constants';
 
 const IconPage = () => {
   const navigation = useNavigation();
@@ -122,4 +124,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default IconPage;
+PageContainer(MODULES.ICON, IconPage);

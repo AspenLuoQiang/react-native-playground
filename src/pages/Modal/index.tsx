@@ -3,6 +3,8 @@ import { StyleSheet, SafeAreaView, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Theme, Navbar, Modal } from 'react-native-ui-view';
 import Demo, { DemoProps } from '../../components/Demo';
+import { PageContainer } from '../../core/router';
+import { MODULES } from '../../constants';
 
 const ModalPage = () => {
   const navigation = useNavigation();
@@ -61,4 +63,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ModalPage;
+PageContainer(MODULES.MODAL, ModalPage);

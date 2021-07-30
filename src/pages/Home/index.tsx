@@ -9,8 +9,10 @@ import toolSelectedIcon from '../../images/tabbar/tool-selected.png';
 
 import Comp from './tabs/comp';
 import Tools from './tabs/tools';
+import { PageContainer } from '../../core/router';
+import { MODULES } from '../../constants';
 
-const Home = () => {
+const HomePage = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const tabList = [
@@ -56,4 +58,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Home;
+PageContainer(MODULES.HOME, HomePage);
