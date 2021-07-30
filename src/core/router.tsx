@@ -6,14 +6,15 @@ import { MODULES } from './constants';
 const PAGE_LIST: { pageName: string; component: React.ComponentType<any> }[] = [];
 
 export const PageContainer = (pageName: string, component: React.ComponentType<any>) => {
-  PAGE_LIST.push({
-    pageName,
-    component,
-  });
+  if (!PAGE_LIST.find(item => item.pageName === pageName)) {
+    PAGE_LIST.push({
+      pageName,
+      component,
+    });
+  }
 };
 
 export const Router = () => {
-  console.log(11, PAGE_LIST);
   const Stack = createStackNavigator();
   return (
     <NavigationContainer>
