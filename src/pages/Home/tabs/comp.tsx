@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View, Text, TouchableHighlight } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Theme, Icon } from 'react-native-ui-view';
-import { MODULES } from '../../../constants';
+import { MODULES } from '../../../core/constants';
 
 const Comp = () => {
   const navigation = useNavigation();

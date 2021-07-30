@@ -10,7 +10,7 @@ import toolSelectedIcon from '../../images/tabbar/tool-selected.png';
 import Comp from './tabs/comp';
 import Tools from './tabs/tools';
 import { PageContainer } from '../../core/router';
-import { MODULES } from '../../constants';
+import { MODULES } from '../../core/constants';
 
 const HomePage = () => {
   const [activeIndex, setActiveIndex] = useState(0);

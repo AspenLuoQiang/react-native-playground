@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator, TransitionPresets } from '@react-navigation/stack';
-import { MODULES } from '../constants';
+import { MODULES } from './constants';
 
 const PAGE_LIST: { pageName: string; component: React.ComponentType<any> }[] = [];
 

@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 import { Theme, Navbar, Badge, BadgeProps } from 'react-native-ui-view';
 import Demo, { DemoProps } from '../../components/Demo';
 import { PageContainer } from '../../core/router';
-import { MODULES } from '../../constants';
+import { MODULES } from '../../core/constants';
 
 const BadgePage = () => {
   const navigation = useNavigation();

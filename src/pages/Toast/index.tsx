@@ -3,7 +3,7 @@ import { StyleSheet, SafeAreaView, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Theme, Navbar, Toast } from 'react-native-ui-view';
 import Demo, { DemoProps } from '../../components/Demo';
-import { MODULES } from '../../constants';
+import { MODULES } from '../../core/constants';
 import { PageContainer } from '../../core/router';
 
 const ToastPage = () => {
