@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, SafeAreaView } from 'react-native';
-import { TabBar, TabItem, Navbar, Theme } from 'react-native-ui-view';
+import { TabBar, TabItem, Theme } from 'react-native-ui-view';
 
 import compIcon from '../../images/tabbar/comp.png';
 import compSelectedIcon from '../../images/tabbar/comp-selected.png';
@@ -32,7 +32,6 @@ const HomePage = () => {
 
   return (
     <SafeAreaView style={[styles.container]}>
-      <Navbar title="组件" />
       <TabBar>
         {tabList.map((item, index) => (
           <TabItem
@@ -42,6 +41,7 @@ const HomePage = () => {
             selectedIcon={item.selectedIcon}
             selected={index === activeIndex}
             onPress={() => setActiveIndex(index)}
+            badge={1}
           >
             {item.content}
           </TabItem>

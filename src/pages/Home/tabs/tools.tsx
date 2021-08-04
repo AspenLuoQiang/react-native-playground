@@ -1,17 +1,12 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
-import { Toast } from 'react-native-ui-view';
+import { Navbar } from 'react-native-ui-view';
 
 const Tools = () => {
-  const showModal = () => {
-    Toast.info('Loading');
-  };
-
   return (
     <View>
-      <Text style={styles.title} onPress={showModal}>
-        Tools
-      </Text>
+      <Navbar title="工具" />
+      <Text style={styles.title}>Tools</Text>
     </View>
   );
 };

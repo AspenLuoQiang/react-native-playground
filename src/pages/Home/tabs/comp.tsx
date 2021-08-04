@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Text, TouchableHighlight } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { Theme, Icon } from 'react-native-ui-view';
+import { Theme, Icon, Navbar } from 'react-native-ui-view';
 import { MODULES } from '../../../core/constants';
 
 const Comp = () => {
@@ -39,6 +39,7 @@ const Comp = () => {
 
   return (
     <View>
+      <Navbar title="组件" />
       <Text style={styles.title}>ReactNative UI View</Text>
       <Text style={styles.subTitle}>优秀的ReactNative UI开发框架</Text>
       <View style={styles.main}>

@@ -54,6 +54,9 @@ const IconPage = () => {
     'upload',
     'wechat-fill',
     'zoom-out',
+
+    'filter',
+    'filter-fill',
   ];
 
   const copyIcon = (name: string) => {
