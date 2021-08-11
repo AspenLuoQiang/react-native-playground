@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, SafeAreaView } from 'react-native';
-import { TabBar, TabItem, Theme } from 'react-native-ui-view';
+import { TabBar, TabItem } from 'react-native-ui-view';
 
 import compIcon from '../../images/tabbar/comp.png';
 import compSelectedIcon from '../../images/tabbar/comp-selected.png';
@@ -31,31 +30,22 @@ const HomePage = () => {
   ];
 
   return (
-    <SafeAreaView style={[styles.container]}>
-      <TabBar>
-        {tabList.map((item, index) => (
-          <TabItem
-            key={index}
-            title={item.title}
-            icon={item.icon}
-            selectedIcon={item.selectedIcon}
-            selected={index === activeIndex}
-            onPress={() => setActiveIndex(index)}
-            badge={1}
-          >
-            {item.content}
-          </TabItem>
-        ))}
-      </TabBar>
-    </SafeAreaView>
+    <TabBar>
+      {tabList.map((item, index) => (
+        <TabItem
+          key={index}
+          title={item.title}
+          icon={item.icon}
+          selectedIcon={item.selectedIcon}
+          selected={index === activeIndex}
+          onPress={() => setActiveIndex(index)}
+          badge={1}
+        >
+          {item.content}
+        </TabItem>
+      ))}
+    </TabBar>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: Theme.fillBase,
-  },
-});
 
 PageContainer(MODULES.HOME, HomePage);
