@@ -38,7 +38,7 @@ const Comp = () => {
   ];
 
   return (
-    <View>
+    <View style={styles.container}>
       <Navbar title="组件" />
       <Text style={styles.title}>ReactNative UI View</Text>
       <Text style={styles.subTitle}>优秀的ReactNative UI开发框架</Text>
@@ -59,6 +59,10 @@ const Comp = () => {
 };
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: Theme.fillBase,
+    flex: 1,
+  },
   title: {
     fontSize: 18,
     textAlign: 'center',
