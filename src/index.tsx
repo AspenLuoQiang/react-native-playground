@@ -8,6 +8,7 @@ import './pages/Modal';
 import './pages/Toast';
 import './pages/Badge';
 import './pages/Search';
+import './pages/IndexList';
 
 const App = () => {
   return (

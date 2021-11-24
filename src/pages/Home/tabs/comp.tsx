@@ -16,6 +16,10 @@ const Comp = () => {
       onPress: () => navigation.navigate(MODULES.ICON),
     },
     {
+      title: 'IndexList 索引列表',
+      onPress: () => navigation.navigate(MODULES.INDEX_LIST),
+    },
+    {
       title: 'Modal 对话框',
       onPress: () => navigation.navigate(MODULES.MODAL),
     },

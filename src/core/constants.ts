@@ -6,4 +6,5 @@ export const MODULES = {
   TOAST: 'TOAST',
   BADGE: 'BADGE',
   SEARCH: 'SEARCH',
+  INDEX_LIST: 'INDEX_LIST',
 };
