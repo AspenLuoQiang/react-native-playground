@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TabBar, TabItem } from 'react-native-ui-view';
+import { TabBar, TabBarItem } from 'react-native-ui-view';
 
 import compIcon from '../../images/tabbar/comp.png';
 import compSelectedIcon from '../../images/tabbar/comp-selected.png';
@@ -32,7 +32,7 @@ const HomePage = () => {
   return (
     <TabBar>
       {tabList.map((item, index) => (
-        <TabItem
+        <TabBarItem
           key={index}
           title={item.title}
           icon={item.icon}
@@ -42,7 +42,7 @@ const HomePage = () => {
           badge={1}
         >
           {item.content}
-        </TabItem>
+        </TabBarItem>
       ))}
     </TabBar>
   );
