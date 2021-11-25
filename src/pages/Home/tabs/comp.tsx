@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text, TouchableHighlight } from 'react-native';
+import { StyleSheet, View, Text, TouchableHighlight, SafeAreaView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Theme, Icon, Navbar } from 'react-native-ui-view';
 import { MODULES } from '../../../core/constants';
@@ -9,19 +9,19 @@ const Comp = () => {
   const list = [
     {
       title: 'Badge 徽标',
-      onPress: () => navigation.navigate(MODULES.BADGE),
+      onPress: () => navigation.navigate({ name: MODULES.BADGE }),
     },
     {
       title: 'Icon 图标',
-      onPress: () => navigation.navigate(MODULES.ICON),
+      onPress: () => navigation.navigate({ name: MODULES.ICON }),
     },
     {
       title: 'IndexList 索引列表',
-      onPress: () => navigation.navigate(MODULES.INDEX_LIST),
+      onPress: () => navigation.navigate({ name: MODULES.INDEX_LIST }),
     },
     {
       title: 'Modal 对话框',
-      onPress: () => navigation.navigate(MODULES.MODAL),
+      onPress: () => navigation.navigate({ name: MODULES.MODAL }),
     },
     {
       title: 'Navbar 导航栏',
@@ -29,7 +29,7 @@ const Comp = () => {
     },
     {
       title: 'Search 搜索',
-      onPress: () => navigation.navigate(MODULES.SEARCH),
+      onPress: () => navigation.navigate({ name: MODULES.SEARCH }),
     },
     {
       title: 'TabBar 底部导航',
@@ -37,12 +37,12 @@ const Comp = () => {
     },
     {
       title: 'Toast 轻提示',
-      onPress: () => navigation.navigate(MODULES.TOAST),
+      onPress: () => navigation.navigate({ name: MODULES.TOAST }),
     },
   ];
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Navbar title="组件" />
       <Text style={styles.title}>ReactNative UI View</Text>
       <Text style={styles.subTitle}>优秀的ReactNative UI开发框架</Text>
@@ -58,7 +58,7 @@ const Comp = () => {
           );
         })}
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 

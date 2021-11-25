@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TabBar, TabBarItem } from 'react-native-ui-view';
+import { TabBar, TabBarItem, Theme } from 'react-native-ui-view';
 
 import compIcon from '../../images/tabbar/comp.png';
 import compSelectedIcon from '../../images/tabbar/comp-selected.png';
@@ -30,21 +30,23 @@ const HomePage = () => {
   ];
 
   return (
-    <TabBar>
-      {tabList.map((item, index) => (
-        <TabBarItem
-          key={index}
-          title={item.title}
-          icon={item.icon}
-          selectedIcon={item.selectedIcon}
-          selected={index === activeIndex}
-          onPress={() => setActiveIndex(index)}
-          badge={1}
-        >
-          {item.content}
-        </TabBarItem>
-      ))}
-    </TabBar>
+    <>
+      <TabBar>
+        {tabList.map((item, index) => (
+          <TabBarItem
+            key={index}
+            title={item.title}
+            icon={item.icon}
+            selectedIcon={item.selectedIcon}
+            selected={index === activeIndex}
+            onPress={() => setActiveIndex(index)}
+            badge={1}
+          >
+            {item.content}
+          </TabBarItem>
+        ))}
+      </TabBar>
+    </>
   );
 };
 
