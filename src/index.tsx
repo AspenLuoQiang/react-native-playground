@@ -9,6 +9,7 @@ import './pages/Toast';
 import './pages/Badge';
 import './pages/Search';
 import './pages/IndexList';
+import './pages/Button';
 
 const App = () => {
   return (

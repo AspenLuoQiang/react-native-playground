@@ -11,8 +11,8 @@ const SearchPage = () => {
   const [badgeProps, setBadgeProps] = useState<BadgeProps>({ text: '99', size: 'small', dot: false, corner: false });
   const [sizeIndex, setSizeIndex] = useState(0);
 
-  const renderBadge = () => {
-    return <Search placeholder="请搜索" />;
+  const renderSearch = () => {
+    return <Search placeholder="请搜索" value="" onChange={() => 1} />;
   };
 
   const params: DemoProps['params'] = [
@@ -34,7 +34,7 @@ const SearchPage = () => {
     <SafeAreaView style={[styles.container]}>
       <Navbar title="Search 搜索" showBack onBack={() => navigation.goBack()} />
       <View style={styles.page}>
-        <Demo result={renderBadge()} params={params} />
+        <Demo result={renderSearch()} params={params} />
       </View>
     </SafeAreaView>
   );

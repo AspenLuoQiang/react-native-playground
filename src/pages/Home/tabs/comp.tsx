@@ -13,7 +13,7 @@ const Comp = () => {
     },
     {
       title: 'Button 按钮',
-      onPress: () => navigation.navigate({ name: MODULES.BADGE }),
+      onPress: () => navigation.navigate({ name: MODULES.BUTTON }),
     },
     {
       title: 'Icon 图标',

@@ -7,4 +7,5 @@ export const MODULES = {
   BADGE: 'BADGE',
   SEARCH: 'SEARCH',
   INDEX_LIST: 'INDEX_LIST',
+  BUTTON: 'BUTTON',
 };
